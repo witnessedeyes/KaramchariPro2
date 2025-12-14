@@ -1,0 +1,85 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 210 20% 98%;
+    --foreground: 210 17% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 17% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 17% 10%;
+    --primary: 210 60% 11%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 150 60% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 45 95% 50%;
+    --accent-foreground: 210 60% 11%;
+    --muted: 210 20% 94%;
+    --muted-foreground: 210 10% 40%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 20% 88%;
+    --input: 210 20% 90%;
+    --ring: 210 60% 11%;
+    --success: 150 60% 45%;
+    --warning: 45 95% 50%;
+    --info: 210 60% 50%;
+    --gradient-primary: linear-gradient(135deg, hsl(210 60% 11%), hsl(210 50% 20%));
+    --gradient-secondary: linear-gradient(135deg, hsl(150 60% 45%), hsl(150 55% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(45 95% 50%), hsl(45 90% 60%));
+    --gradient-hero: linear-gradient(180deg, hsl(210 60% 11%), hsl(210 50% 15%));
+    --shadow-card: 0 4px 20px -4px hsl(210 60% 11% / 0.1);
+    --shadow-hover: 0 8px 30px -6px hsl(210 60% 11% / 0.15);
+    --shadow-glow: 0 0 40px hsl(150 60% 45% / 0.2);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 210 60% 8%;
+    --foreground: 0 0% 98%;
+    --card: 210 50% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 210 50% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 210 60% 11%;
+    --secondary: 150 60% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 45 95% 50%;
+    --accent-foreground: 210 60% 11%;
+    --muted: 210 40% 18%;
+    --muted-foreground: 210 10% 65%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 40% 20%;
+    --input: 210 40% 20%;
+    --ring: 0 0% 98%;
+    --gradient-hero: linear-gradient(180deg, hsl(210 60% 8%), hsl(210 50% 12%));
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-hover: 0 8px 30px -6px hsl(0 0% 0% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
